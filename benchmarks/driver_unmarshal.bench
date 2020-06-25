@@ -1,0 +1,14 @@
+BenchmarkUnmarshal against driver master branch
+
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkUnmarshal/empty-8         	 2926690	       393 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/small-8         	 1253505	       971 ns/op	     416 B/op	      12 allocs/op
+BenchmarkUnmarshal/size_10-8       	  220447	      5162 ns/op	    2288 B/op	      70 allocs/op
+BenchmarkUnmarshal/size_50-8       	   55010	     21052 ns/op	    9906 B/op	     312 allocs/op
+BenchmarkUnmarshal/size_100-8      	   29635	     41061 ns/op	   19189 B/op	     613 allocs/op
+BenchmarkUnmarshal/size_500-8      	    5779	    204752 ns/op	   89235 B/op	    3015 allocs/op
+BenchmarkUnmarshal/size_1000-8     	    3080	    385265 ns/op	  178245 B/op	    6016 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	12.238s

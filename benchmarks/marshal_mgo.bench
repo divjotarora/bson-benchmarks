@@ -1,0 +1,14 @@
+BenchmarkMarshal against 10gen/mgo commit 7ddd511871dec26ace0517365e4e496b545159b5
+
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkMarshal/empty-8         	 9408987	       133 ns/op	      96 B/op	       2 allocs/op
+BenchmarkMarshal/small-8         	 5919034	       198 ns/op	      96 B/op	       2 allocs/op
+BenchmarkMarshal/size_10-8       	 1425453	       839 ns/op	     480 B/op	       4 allocs/op
+BenchmarkMarshal/size_50-8       	  348388	      3421 ns/op	    2016 B/op	       6 allocs/op
+BenchmarkMarshal/size_100-8      	  180248	      6634 ns/op	    4064 B/op	       7 allocs/op
+BenchmarkMarshal/size_500-8      	   29622	     42530 ns/op	   53217 B/op	      14 allocs/op
+BenchmarkMarshal/size_1000-8     	   10000	    123298 ns/op	   96233 B/op	      16 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	10.212s

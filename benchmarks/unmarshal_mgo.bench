@@ -1,0 +1,14 @@
+BenchmarkUnmarshal against 10gen/mgo commit 7ddd511871dec26ace0517365e4e496b545159b5
+
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkUnmarshal/empty-8         	 2702722	       418 ns/op	     352 B/op	       4 allocs/op
+BenchmarkUnmarshal/small-8         	 1764774	       643 ns/op	     416 B/op	       9 allocs/op
+BenchmarkUnmarshal/size_10-8       	  445376	      2718 ns/op	    1504 B/op	      55 allocs/op
+BenchmarkUnmarshal/size_50-8       	  100756	     11875 ns/op	    7136 B/op	     257 allocs/op
+BenchmarkUnmarshal/size_100-8      	   53030	     22453 ns/op	   14432 B/op	     508 allocs/op
+BenchmarkUnmarshal/size_500-8      	   10000	    127824 ns/op	   64614 B/op	    2510 allocs/op
+BenchmarkUnmarshal/size_1000-8     	    5420	    229489 ns/op	  129397 B/op	    5011 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	9.940s

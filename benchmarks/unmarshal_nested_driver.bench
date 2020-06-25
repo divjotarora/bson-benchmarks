@@ -1,0 +1,11 @@
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkUnmarshalNested/small-8         	  726181	      1673 ns/op	     688 B/op	      21 allocs/op
+BenchmarkUnmarshalNested/size_10-8       	  145574	      8290 ns/op	    3713 B/op	      95 allocs/op
+BenchmarkUnmarshalNested/size_50-8       	   32647	     39040 ns/op	   21638 B/op	     418 allocs/op
+BenchmarkUnmarshalNested/size_100-8      	   15615	     76321 ns/op	   43118 B/op	     819 allocs/op
+BenchmarkUnmarshalNested/size_500-8      	    2670	    421511 ns/op	  198958 B/op	    4021 allocs/op
+BenchmarkUnmarshalNested/size_1000-8     	    1485	    887564 ns/op	  395240 B/op	    8023 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	9.692s

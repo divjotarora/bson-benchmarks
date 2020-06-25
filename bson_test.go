@@ -97,7 +97,7 @@ func BenchmarkUnmarshalNested(b *testing.B) {
 }
 
 func buildDoc(n int) bson.D {
-	var doc bson.D
+	doc := bson.D{}
 	for i := 0; i < n; i++ {
 		key, val := getStringElement(i)
 		doc = append(doc, bson.E{key, val})
@@ -106,7 +106,7 @@ func buildDoc(n int) bson.D {
 }
 
 func buildNestedDoc(n int) bson.D {
-	var doc bson.D
+	doc := bson.D{}
 	for i := 0; i < n; i++ {
 		doc = bson.D{{"x", doc}}
 	}

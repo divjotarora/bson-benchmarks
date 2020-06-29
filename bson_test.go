@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"testing"
+	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
@@ -94,6 +95,49 @@ func BenchmarkUnmarshalNested(b *testing.B) {
 			}
 		})
 	}
+}
+
+func BenchmarkUnmarshalIsMaster(b *testing.B) {
+	isMasterBytes := buildIsMasterResponse(b)
+
+	b.ReportAllocs()
+	for i := 0; i < b.N; i++ {
+		var doc bson.D
+		err := bson.Unmarshal(isMasterBytes, &doc)
+		if err != nil {
+			b.Error(err)
+		}
+	}
+}
+
+func buildIsMasterResponse(b *testing.B) []byte {
+	response := bson.D{
+		{"ismaster", true},
+		{"maxBsonObjectSize", 16777216},
+		{"maxMessageSizeBytes", 48000000},
+		{"maxWriteBatchSize", 100000},
+		{"localTime", time.Now()},
+		{"logicalSessionTimeoutMinutes", 30},
+		{"minWireVersion", 0},
+		{"maxWireVersion", 6},
+		{"readOnly", false},
+		{"hostsBsonD", []interface{}{
+			bson.E{"host", "blabla1"},
+			bson.E{"host", "blabla2"},
+			bson.E{"host", "blabla3"},
+		}},
+		{"hostsIf", []interface{}{
+			bson.D{{"host", "blabla1"}},
+			bson.D{{"host", "blabla2"}},
+			bson.D{{"host", "blabla3"}},
+		}},
+	}
+
+	res, err := bson.Marshal(response)
+	if err != nil {
+		b.Fatal(err)
+	}
+	return res
 }
 
 func buildDoc(n int) bson.D {

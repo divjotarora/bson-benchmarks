@@ -32,7 +32,7 @@ func BenchmarkMarshal(b *testing.B) {
 
 				b.ReportAllocs()
 				for i := 0; i < b.N; i++ {
-					_, err := bson.Marshal(doc)
+					_, err := marshal(doc)
 					if err != nil {
 						b.Fatal(err)
 					}
@@ -60,7 +60,7 @@ func BenchmarkMarshal(b *testing.B) {
 
 				b.ReportAllocs()
 				for i := 0; i < b.N; i++ {
-					_, err := bson.Marshal(doc)
+					_, err := marshal(doc)
 					if err != nil {
 						b.Fatal(err)
 					}
@@ -83,7 +83,7 @@ func BenchmarkMarshal(b *testing.B) {
 				b.ReportAllocs()
 
 				for i := 0; i < b.N; i++ {
-					_, err := bson.Marshal(tc.doc)
+					_, err := marshal(tc.doc)
 					if err != nil {
 						b.Fatal(err)
 					}
@@ -113,8 +113,7 @@ func BenchmarkUnmarshal(b *testing.B) {
 
 				b.ReportAllocs()
 				for i := 0; i < b.N; i++ {
-					unmarshalled := bson.D{}
-					err := bson.Unmarshal(doc, &unmarshalled)
+					_, err := unmarshal(doc)
 					if err != nil {
 						b.Fatal(err)
 					}
@@ -142,8 +141,7 @@ func BenchmarkUnmarshal(b *testing.B) {
 
 				b.ReportAllocs()
 				for i := 0; i < b.N; i++ {
-					var unmarshalled bson.D
-					err := bson.Unmarshal(doc, &unmarshalled)
+					_, err := unmarshal(doc)
 					if err != nil {
 						b.Fatal(err)
 					}
@@ -163,15 +161,14 @@ func BenchmarkUnmarshal(b *testing.B) {
 		}
 		for _, tc := range testCases {
 			b.Run(tc.name, func(b *testing.B) {
-				docBytes, err := bson.Marshal(tc.doc)
+				docBytes, err := marshal(tc.doc)
 				if err != nil {
 					b.Fatal(err)
 				}
 
 				b.ReportAllocs()
 				for i := 0; i < b.N; i++ {
-					var newDoc bson.D
-					err := bson.Unmarshal(docBytes, &newDoc)
+					_, err := unmarshal(docBytes)
 					if err != nil {
 						b.Fatal(err)
 					}

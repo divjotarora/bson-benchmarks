@@ -2,7 +2,11 @@
 
 package main
 
-import "gopkg.in/mgo.v2/bson"
+import (
+	"gopkg.in/mgo.v2/bson"
+)
+
+// Helpers to build bson.D instances using mgo's BSON library.
 
 func buildDoc(n int) bson.D {
 	doc := bson.D{}

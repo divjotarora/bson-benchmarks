@@ -9,7 +9,9 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func getIsMasterResponse() interface{} {
+// Helper functions to build command request/response documents using the driver's BSON libray.
+
+func getIsMasterResponse() bson.D {
 	return bson.D{
 		{"ismaster", true},
 		{"maxBsonObjectSize", 16777216},
@@ -33,7 +35,7 @@ func getIsMasterResponse() interface{} {
 	}
 }
 
-func getFindOneRequest() interface{} {
+func getFindOneRequest() bson.D {
 	return bson.D{
 		{"find", "bla"},
 		{"$db", "test"},
@@ -62,7 +64,7 @@ func getFindOneRequest() interface{} {
 	}
 }
 
-func getFindOneResponse() interface{} {
+func getFindOneResponse() bson.D {
 	return bson.D{
 		{"cursor", bson.D{
 			{"id", int64(0)},

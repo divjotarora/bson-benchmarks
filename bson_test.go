@@ -4,7 +4,10 @@ import (
 	"testing"
 )
 
-// Benchmarks ported from https://github.com/mongodb/mongonet/blob/Benchmarks/bsonutil_test.go
+// Main benchmarks file. These benchmarks are ported from
+// https://github.com/mongodb/mongonet/blob/Benchmarks/bsonutil_test.go. This file is organized so it does not depend
+// on a specific BSON package. Instead, it calls out to helper functions defined in build-flagged files that depend
+// on individual BSON libraries.
 
 func BenchmarkMarshal(b *testing.B) {
 	b.Run("flat", func(b *testing.B) {
@@ -68,9 +71,9 @@ func BenchmarkMarshal(b *testing.B) {
 			name string
 			doc  interface{}
 		}{
-			{"isMaster response", getIsMasterResponse},
-			{"findOne request", getFindOneRequest},
-			{"findOne response", getFindOneRequest},
+			{"isMaster response", getIsMasterResponse()},
+			{"findOne request", getFindOneRequest()},
+			{"findOne response", getFindOneRequest()},
 		}
 		for _, tc := range testCases {
 			b.Run(tc.name, func(b *testing.B) {

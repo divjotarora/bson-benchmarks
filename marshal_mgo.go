@@ -2,7 +2,11 @@
 
 package main
 
-import "gopkg.in/mgo.v2/bson"
+import (
+	"gopkg.in/mgo.v2/bson"
+)
+
+// Helpers to wrap mgo's bson.Marshal and bson.Unmarshal functions.
 
 func marshal(doc interface{}) ([]byte, error) {
 	return bson.Marshal(doc)

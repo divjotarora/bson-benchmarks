@@ -2,7 +2,11 @@
 
 package main
 
-import "go.mongodb.org/mongo-driver/bson"
+import (
+	"go.mongodb.org/mongo-driver/bson"
+)
+
+// Helpers to build bson.D instances using the driver's BSON library.
 
 func buildDoc(n int) bson.D {
 	doc := bson.D{}

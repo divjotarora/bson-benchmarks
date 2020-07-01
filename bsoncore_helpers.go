@@ -6,6 +6,9 @@ import (
 	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
 )
 
+// Helpers to build bsoncore.Document instances. This file is not build-flagged because it can be used when testing both
+// the driver and mgo.
+
 func buildRawDoc(n int) bsoncore.Document {
 	idx, doc := bsoncore.AppendDocumentStart(nil)
 	for i := 0; i < n; i++ {

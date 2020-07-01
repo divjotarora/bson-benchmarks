@@ -8,7 +8,7 @@ var (
 	bsonRegistry = bson.DefaultRegistry
 )
 
-func marshal(doc bson.D) ([]byte, error) {
+func marshal(doc interface{}) ([]byte, error) {
 	return bson.MarshalWithRegistry(bsonRegistry, doc)
 }
 

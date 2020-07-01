@@ -8,8 +8,8 @@ import (
 	"gopkg.in/mgo.v2/bson"
 )
 
-var (
-	isMasterResponse = bson.D{
+func getIsMasterResponse() interface{} {
+	return bson.D{
 		{"ismaster", true},
 		{"maxBsonObjectSize", 16777216},
 		{"maxMessageSizeBytes", 48000000},
@@ -30,8 +30,10 @@ var (
 			bson.D{{"host", "blabla3"}},
 		}},
 	}
+}
 
-	findOneRequest = bson.D{
+func getFindOneRequest() interface{} {
+	return bson.D{
 		{"find", "bla"},
 		{"$db", "test"},
 		{"filter", bson.D{{"b", 1}}},
@@ -54,8 +56,10 @@ var (
 			}},
 		}},
 	}
+}
 
-	findOneResponse = bson.D{
+func getFindOneResponse() interface{} {
+	return bson.D{
 		{"cursor", bson.D{
 			{"id", int64(0)},
 			{"ns", "eliot1-bla.test"},
@@ -86,4 +90,4 @@ var (
 		}},
 		{"operationTime", bson.MongoTimestamp(1593340459)},
 	}
-)
+}

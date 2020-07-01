@@ -4,7 +4,7 @@ package main
 
 import "gopkg.in/mgo.v2/bson"
 
-func marshal(doc bson.D) ([]byte, error) {
+func marshal(doc interface{}) ([]byte, error) {
 	return bson.Marshal(doc)
 }
 

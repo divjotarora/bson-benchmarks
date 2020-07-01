@@ -2,8 +2,6 @@ package main
 
 import (
 	"testing"
-
-	"go.mongodb.org/mongo-driver/bson"
 )
 
 // Benchmarks ported from https://github.com/mongodb/mongonet/blob/Benchmarks/bsonutil_test.go
@@ -68,11 +66,11 @@ func BenchmarkMarshal(b *testing.B) {
 	b.Run("commands", func(b *testing.B) {
 		testCases := []struct {
 			name string
-			doc  bson.D
+			doc  interface{}
 		}{
-			{"isMaster response", isMasterResponse},
-			{"findOne request", findOneRequest},
-			{"findOne response", findOneResponse},
+			{"isMaster response", getIsMasterResponse},
+			{"findOne request", getFindOneRequest},
+			{"findOne response", getFindOneRequest},
 		}
 		for _, tc := range testCases {
 			b.Run(tc.name, func(b *testing.B) {
@@ -149,11 +147,11 @@ func BenchmarkUnmarshal(b *testing.B) {
 	b.Run("commands", func(b *testing.B) {
 		testCases := []struct {
 			name string
-			doc  bson.D
+			doc  interface{}
 		}{
-			{"isMaster response", isMasterResponse},
-			{"findOne request", findOneRequest},
-			{"findOne response", findOneResponse},
+			{"isMaster response", getIsMasterResponse()},
+			{"findOne request", getFindOneRequest()},
+			{"findOne response", getFindOneResponse()},
 		}
 		for _, tc := range testCases {
 			b.Run(tc.name, func(b *testing.B) {

@@ -4,7 +4,7 @@ go 1.13
 
 replace go.mongodb.org/mongo-driver => /home/divjot/code/mongo-go-driver
 
-replace gopkg.in/mgo.v2 => /home/divjot/go/src/github.com/10gen/mgo
+replace gopkg.in/mgo.v2 => /home/divjot/code/mgo
 
 require (
 	go.mongodb.org/mongo-driver v1.3.4

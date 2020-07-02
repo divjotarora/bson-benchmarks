@@ -1,4 +1,4 @@
-# Setup
+# Local Setup
 
 Clone the driver from `git@github.com:mongodb/mongo-go-driver.git`.
 
@@ -19,3 +19,9 @@ installations:
 replace go.mongodb.org/mongo-driver => /path/to/driver/installation
 replace gopkg.in/mgo.v2 => /patch/to/mgo/installation
 ```
+
+# CI Setup
+
+When running in CI, check out the `nonlocal-gomod` branch in this project. The changes on that branch modify the
+`go.mod` file to only depend on remote repositories rather than local copies. For benchmarks using mgo, the `go.mod`
+file replaces `gopkg.in/mgo.v2` with `github.com/divjotarora` pinned to the `modules` branch.

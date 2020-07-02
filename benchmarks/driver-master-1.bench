@@ -1,0 +1,39 @@
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkMarshal/flat/empty-8        	 3021082	       397 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8        	 2332894	       514 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8      	  840025	      1443 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8      	  202930	      5923 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8     	  104976	     11450 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8     	   19248	     62616 ns/op	   53089 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8    	    9439	    122920 ns/op	   96127 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8      	 2038564	       591 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8    	  507999	      2382 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8    	  111333	     10708 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8   	   56625	     21213 ns/op	    1860 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8   	   10000	    108921 ns/op	   14989 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8  	    5324	    221199 ns/op	   29372 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  290138	      4174 ns/op	     896 B/op	       6 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	  547767	      2207 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	  513482	      2234 ns/op	     288 B/op	       2 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 2002664	       598 ns/op	     288 B/op	       5 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	  747644	      1533 ns/op	     448 B/op	      13 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  164787	      7328 ns/op	    2320 B/op	      71 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	   40144	     29923 ns/op	    9938 B/op	     313 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   20899	     57635 ns/op	   19221 B/op	     614 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	    4232	    277538 ns/op	   89271 B/op	    3016 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    2126	    559030 ns/op	  178295 B/op	    6018 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	  470144	      2571 ns/op	     688 B/op	      21 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  103094	     11677 ns/op	    3713 B/op	      95 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   22573	     53278 ns/op	   21638 B/op	     418 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   10000	    105762 ns/op	   43120 B/op	     819 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    2197	    534728 ns/op	  199047 B/op	    4021 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    1029	   1142075 ns/op	  396528 B/op	    8024 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	   60411	     19965 ns/op	    5025 B/op	     158 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	   98198	     12115 ns/op	    3152 B/op	      98 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	   73282	     16442 ns/op	    4049 B/op	     129 allocs/op
+BenchmarkUnmarshalPOCExplanation/intDecodeValue-8     	30399993	        39.9 ns/op	       8 B/op	       1 allocs/op
+BenchmarkUnmarshalPOCExplanation/intDecodeType-8      	55356068	        21.6 ns/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	46.337s

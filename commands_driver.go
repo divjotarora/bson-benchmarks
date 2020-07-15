@@ -106,10 +106,12 @@ func getFindOneResponse() bson.D {
 
 func getLargeInsertRequest() bson.D {
 	isMasterResponse := getIsMasterResponse()
-	isMasterResponse = bson.D{{"nest", isMasterResponse}}
+	for i := 0; i < 50; i++ {
+		isMasterResponse = bson.D{{"nest", isMasterResponse}}
+	}
 
 	var insertDocs []bson.D
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 200; i++ {
 		insertDocs = append(insertDocs, isMasterResponse)
 	}
 

@@ -103,3 +103,38 @@ func getFindOneResponse() bson.D {
 		}},
 	}
 }
+
+func getLargeInsertRequest() bson.D {
+	isMasterResponse := getIsMasterResponse()
+	isMasterResponse = bson.D{{"nest", isMasterResponse}}
+
+	var insertDocs []bson.D
+	for i := 0; i < 10; i++ {
+		insertDocs = append(insertDocs, isMasterResponse)
+	}
+
+	return bson.D{
+		{"insert", "collection"},
+		{"documents", insertDocs},
+		{"$db", "test"},
+		{"lsid", bson.D{
+			{"id", primitive.Binary{
+				Subtype: uint8(4),
+				Data:    []byte("blalblalbalblablalabl"),
+			}},
+		}},
+		{"$clusterTime", bson.D{
+			{"clusterTime", primitive.Timestamp{
+				T: uint32(1593340459),
+				I: uint32(1),
+			}},
+			{"signature", bson.D{
+				{"hash", primitive.Binary{
+					Subtype: uint8(4),
+					Data:    []byte("blalblalbalblablalablibibibibibibibi"),
+				}},
+				{"keyId", int64(6843344346754842627)},
+			}},
+		}},
+	}
+}

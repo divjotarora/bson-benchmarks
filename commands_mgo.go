@@ -93,3 +93,35 @@ func getFindOneResponse() bson.D {
 		{"operationTime", bson.MongoTimestamp(1593340459)},
 	}
 }
+
+func getLargeInsertRequest() bson.D {
+	isMasterResponse := getIsMasterResponse()
+	isMasterResponse = bson.D{{"nest", isMasterResponse}}
+
+	var insertDocs []bson.D
+	for i := 0; i < 10; i++ {
+		insertDocs = append(insertDocs, isMasterResponse)
+	}
+
+	return bson.D{
+		{"insert", "collection"},
+		{"documents", insertDocs},
+		{"$db", "test"},
+		{"lsid", bson.D{
+			{"id", bson.Binary{
+				Kind: uint8(4),
+				Data: []byte("blalblalbalblablalabl"),
+			}},
+		}},
+		{"$clusterTime", bson.D{
+			{"clusterTime", bson.MongoTimestamp(1593340459)},
+			{"signature", bson.D{
+				{"hash", bson.Binary{
+					Kind: uint8(4),
+					Data: []byte("blalblalbalblablalablibibibibibibibi"),
+				}},
+				{"keyId", int64(6843344346754842627)},
+			}},
+		}},
+	}
+}

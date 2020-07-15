@@ -74,6 +74,7 @@ func BenchmarkMarshal(b *testing.B) {
 			{"isMaster response", getIsMasterResponse()},
 			{"findOne request", getFindOneRequest()},
 			{"findOne response", getFindOneRequest()},
+			{"large insert request", getLargeInsertRequest()},
 		}
 		for _, tc := range testCases {
 			b.Run(tc.name, func(b *testing.B) {
@@ -155,6 +156,7 @@ func BenchmarkUnmarshal(b *testing.B) {
 			{"isMaster response", getIsMasterResponse()},
 			{"findOne request", getFindOneRequest()},
 			{"findOne response", getFindOneResponse()},
+			{"large insert request", getLargeInsertRequest()},
 		}
 		for _, tc := range testCases {
 			b.Run(tc.name, func(b *testing.B) {

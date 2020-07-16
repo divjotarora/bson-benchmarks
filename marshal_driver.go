@@ -13,7 +13,7 @@ import (
 
 var (
 	tD           = reflect.TypeOf(primitive.D{})
-	bsonRegistry = bsoncodec.NewRegistryBuilder().
+	bsonRegistry = bson.NewRegistryBuilder().
 			RegisterEncoder(tD, bsoncodec.ValueEncoderFunc(bsonx.DEncodeValue)).
 			Build()
 )

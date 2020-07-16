@@ -22,12 +22,12 @@ func getIsMasterResponse() bson.D {
 		{"minWireVersion", 0},
 		{"maxWireVersion", 6},
 		{"readOnly", false},
-		{"hostsBsonD", []bson.D{
+		{"hostsBsonD", bson.A{
 			bson.D{{"host", "blabla1"}},
 			bson.D{{"host", "blabla2"}},
 			bson.D{{"host", "blabla3"}},
 		}},
-		{"hostsIf", []interface{}{
+		{"hostsIf", bson.A{
 			bson.D{{"host", "blabla1"}},
 			bson.D{{"host", "blabla2"}},
 			bson.D{{"host", "blabla3"}},
@@ -110,7 +110,7 @@ func getLargeInsertRequest() bson.D {
 		isMasterResponse = bson.D{{"nest", isMasterResponse}}
 	}
 
-	var insertDocs []bson.D
+	var insertDocs bson.A
 	for i := 0; i < 200; i++ {
 		insertDocs = append(insertDocs, isMasterResponse)
 	}

@@ -21,7 +21,7 @@ func getIsMasterResponse() bson.D {
 		{"minWireVersion", 0},
 		{"maxWireVersion", 6},
 		{"readOnly", false},
-		{"hostsBsonD", []bson.D{
+		{"hostsBsonD", []interface{}{
 			bson.D{{"host", "blabla1"}},
 			bson.D{{"host", "blabla2"}},
 			bson.D{{"host", "blabla3"}},
@@ -65,7 +65,7 @@ func getFindOneResponse() bson.D {
 		{"cursor", bson.D{
 			{"id", int64(0)},
 			{"ns", "eliot1-bla.test"},
-			{"firstBatch", []bson.D{
+			{"firstBatch", []interface{}{
 				bson.D{
 					{"_id", bson.NewObjectId()},
 					{"a", 1},
@@ -100,7 +100,7 @@ func getLargeInsertRequest() bson.D {
 		isMasterResponse = bson.D{{"nest", isMasterResponse}}
 	}
 
-	var insertDocs []bson.D
+	var insertDocs []interface{}
 	for i := 0; i < 200; i++ {
 		insertDocs = append(insertDocs, isMasterResponse)
 	}

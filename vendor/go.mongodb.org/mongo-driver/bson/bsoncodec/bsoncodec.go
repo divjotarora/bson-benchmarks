@@ -191,7 +191,7 @@ func decodeTypeOrValue(decoder ValueDecoder, dc DecodeContext, vr bsonrw.ValueRe
 func decodeTypeOrValueWithInfo(vd ValueDecoder, td typeDecoder, dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, error) {
 	if td != nil {
 		val, err := td.decodeType(dc, vr, t)
-		if err == nil {
+		if err == nil && val.Type() != t {
 			// This conversion step is necessary for slices and maps. If a user declares variables like:
 			//
 			// type myBool bool

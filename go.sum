@@ -3,6 +3,10 @@ github.com/aws/aws-sdk-go v1.29.15/go.mod h1:1KvfttTE3SPKMpo8g2c6jL3ZKfXtFvKscTg
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/divjotarora/mgo v0.0.0-20200626010915-7f441db88ff2 h1:7NMwrOSjjdp4JCWr374dRKxTLyRLPiq8u2Ppf7ROd2g=
+github.com/divjotarora/mgo v0.0.0-20200626010915-7f441db88ff2/go.mod h1:UDT1nPdcPMu+svpsHKmyGF5P7Bp+elAP60JF42xofrQ=
+github.com/divjotarora/mongo-go-driver v0.0.7-0.20200724170234-13a3a4fae8a9 h1:xutF0M4AFD/ogxg4oyNUt0/PCfvTZc4GNVOuVfx0cVg=
+github.com/divjotarora/mongo-go-driver v0.0.7-0.20200724170234-13a3a4fae8a9/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-stack/stack v1.8.0 h1:5SgMzNM5HxrEjV0ww2lTmX6E2Izsfxas4+YHWRs3Lsk=
 github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=

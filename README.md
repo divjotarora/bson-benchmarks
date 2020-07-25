@@ -38,18 +38,20 @@ This run was used to get the beginning baseline numbers:
 Numbers for both the driver and mgo, as well as comparison numbers generated using `benchstat` are available in the
 `benchmarks/starting` directory. The `benchstat` tool was invoked using `benchstat mgo.bench driver.bench > comparison.bench`.
 
-## Basic Unmarshal Improvements
+## no-bugfix
 
-This run was conducted to measure the effect of making the bare minimum improvements to the `bson.Unmarshal` code path.
-These improvements included:
+Includes all changes (GODRIVER-1680 - GODRIVER-1683) but has a bug where custom type map entries for `interface{}` are
+not respected and documents cannot be decoded into maps with custom types that have type decoders. For example:
 
-- Add a `typeDecoder` interface
-- Add a dedicated `DDecodeValue` decoder for `primitive.D` instances
-- Change `EmptyInterfaceCodec` to implement `typeDecoder` and delegate to `typeDecoder` when possible, falling back to `ValueDecoder` when not.
+```
+type myBool bool
+var m map[string]myBool
+```
 
-Details:
+Decoding into `m` in this example would fail because the value isn't converted correctly.
 
-- Driver commit: [e33fb05539f40505048d3a60ee2f8620811b16ae](https://github.com/divjotarora/mongo-go-driver/commit/e33fb05539f40505048d3a60ee2f8620811b16ae)
-- Same mgo commit
+## full-bugfix
 
-Numbers can be found in the `benchmarks/basic-unmarshal-improvements` directory.
+Includes all changes and a fix to the bug described above. The fix is to call `reflect.Value.Convert` to convert between
+types. This also includes a small optimization so the `decodeTypeOrValueWithInfo` function only calls `Convert` if the
+source and target types differ because adding the `Convert` call unconditionally introduced a perf decrease.

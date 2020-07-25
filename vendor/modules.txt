@@ -1,6 +1,6 @@
 # github.com/go-stack/stack v1.8.0
 github.com/go-stack/stack
-# go.mongodb.org/mongo-driver v1.4.0-beta2.0.20200724175811-46d5d7678dc1 => github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725012058-3c67c25251b3
+# go.mongodb.org/mongo-driver v1.4.0-beta2.0.20200724175811-46d5d7678dc1 => github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725014439-c7af9d11990b
 go.mongodb.org/mongo-driver/bson
 go.mongodb.org/mongo-driver/bson/bsoncodec
 go.mongodb.org/mongo-driver/bson/bsonoptions

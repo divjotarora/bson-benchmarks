@@ -190,7 +190,18 @@ func decodeTypeOrValue(decoder ValueDecoder, dc DecodeContext, vr bsonrw.ValueRe
 
 func decodeTypeOrValueWithInfo(vd ValueDecoder, td typeDecoder, dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, error) {
 	if td != nil {
-		return td.decodeType(dc, vr, t)
+		val, err := td.decodeType(dc, vr, t)
+		if err == nil && val.Type() != t {
+			// This conversion step is necessary for slices and maps. If a user declares variables like:
+			//
+			// type myBool bool
+			// var m map[string]myBool
+			//
+			// and tries to decode BSON bytes into the map, the decoding will fail if this conversion is not present
+			// because we'll try to assign a value of type bool to one of type myBool.
+			val = val.Convert(t)
+		}
+		return val, err
 	}
 
 	val := reflect.New(t).Elem()

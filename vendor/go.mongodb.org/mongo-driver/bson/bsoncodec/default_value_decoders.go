@@ -164,17 +164,7 @@ func (dvd DefaultValueDecoders) DDecodeValue(dc DecodeContext, vr bsonrw.ValueRe
 			return err
 		}
 
-		// Delegate out to the typeDecoder for interface{} if it exists. If not, create a new interface{} value and
-		// delegate out to the ValueDecoder. This could be accomplished by calling decodeTypeOrValue, but this would
-		// require casting decoder to typeDecoder for every element. Because decoder isn't changing, we can optimize and
-		// only cast once.
-		var elem reflect.Value
-		if tEmptyTypeDecoder != nil {
-			elem, err = tEmptyTypeDecoder.decodeType(dc, elemVr, tEmpty)
-		} else {
-			elem = reflect.New(tEmpty).Elem()
-			err = decoder.DecodeValue(dc, elemVr, elem)
-		}
+		elem, err := decodeTypeOrValueWithInfo(decoder, tEmptyTypeDecoder, dc, elemVr, tEmpty)
 		if err != nil {
 			return err
 		}

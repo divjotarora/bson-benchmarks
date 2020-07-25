@@ -11,6 +11,8 @@ github.com/divjotarora/mongo-go-driver v0.0.7-0.20200724182600-946d2448785e h1:P
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200724182600-946d2448785e/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200724213035-31166d4049b0 h1:UJl3tUyOoOUECPr82PeqqwFTUwl6lQvGEBE9TpaDcKs=
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200724213035-31166d4049b0/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
+github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725012058-3c67c25251b3 h1:/ceTZWUwM9U2Z+V1ZBS5lsQWaawiCsQ3bDsctVRaeCc=
+github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725012058-3c67c25251b3/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-stack/stack v1.8.0 h1:5SgMzNM5HxrEjV0ww2lTmX6E2Izsfxas4+YHWRs3Lsk=
 github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=

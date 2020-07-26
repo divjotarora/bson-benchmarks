@@ -17,6 +17,8 @@ github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725014439-c7af9d11990b h1:F
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725014439-c7af9d11990b/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725020718-7578e71a1dfd h1:BQIku7/TLikUlB6f/igfBEZwsXr2F9sC/Zg/2pnEIN8=
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725020718-7578e71a1dfd/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
+github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725022744-b02d1cfd7fd3 h1:kxaxB5kZEywyADVaJjwJoBXy5K90NJpbqWI7vXRf0cg=
+github.com/divjotarora/mongo-go-driver v0.0.7-0.20200725022744-b02d1cfd7fd3/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200726011558-fa5dee1ccefc h1:NveZAeau7Cmio3Tz3WZ0HCL1t28nbpg4x5qHBDDytTg=
 github.com/divjotarora/mongo-go-driver v0.0.7-0.20200726011558-fa5dee1ccefc/go.mod h1:llVBH2pkj9HywK0Dtdt6lDikOjFLbceHVu/Rc0iMKLs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=

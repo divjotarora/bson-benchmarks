@@ -48,9 +48,9 @@ func (bsc *ByteSliceCodec) EncodeValue(ec EncodeContext, vw bsonrw.ValueWriter, 
 	return vw.WriteBinary(val.Interface().([]byte))
 }
 
-func (bsc *ByteSliceCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, error) {
+func (bsc *ByteSliceCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, reflect.Type, error) {
 	if t != tByteSlice {
-		return emptyValue, ValueDecoderError{
+		return emptyValue, emptyType, ValueDecoderError{
 			Name:     "ByteSliceDecodeValue",
 			Types:    []reflect.Type{tByteSlice},
 			Received: reflect.Zero(t),
@@ -63,36 +63,36 @@ func (bsc *ByteSliceCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t
 	case bsontype.String:
 		str, err := vr.ReadString()
 		if err != nil {
-			return emptyValue, err
+			return emptyValue, emptyType, err
 		}
 		data = []byte(str)
 	case bsontype.Symbol:
 		sym, err := vr.ReadSymbol()
 		if err != nil {
-			return emptyValue, err
+			return emptyValue, emptyType, err
 		}
 		data = []byte(sym)
 	case bsontype.Binary:
 		var subtype byte
 		data, subtype, err = vr.ReadBinary()
 		if err != nil {
-			return emptyValue, err
+			return emptyValue, emptyType, err
 		}
 		if subtype != bsontype.BinaryGeneric && subtype != bsontype.BinaryBinaryOld {
-			return emptyValue, decodeBinaryError{subtype: subtype, typeName: "[]byte"}
+			return emptyValue, emptyType, decodeBinaryError{subtype: subtype, typeName: "[]byte"}
 		}
 	case bsontype.Null:
 		err = vr.ReadNull()
 	case bsontype.Undefined:
 		err = vr.ReadUndefined()
 	default:
-		return emptyValue, fmt.Errorf("cannot decode %v into a []byte", vrType)
+		return emptyValue, emptyType, fmt.Errorf("cannot decode %v into a []byte", vrType)
 	}
 	if err != nil {
-		return emptyValue, err
+		return emptyValue, emptyType, err
 	}
 
-	return reflect.ValueOf(data), nil
+	return reflect.ValueOf(data), tByteSlice, nil
 }
 
 // DecodeValue is the ValueDecoder for []byte.
@@ -101,7 +101,7 @@ func (bsc *ByteSliceCodec) DecodeValue(dc DecodeContext, vr bsonrw.ValueReader, 
 		return ValueDecoderError{Name: "ByteSliceDecodeValue", Types: []reflect.Type{tByteSlice}, Received: val}
 	}
 
-	elem, err := bsc.decodeType(dc, vr, tByteSlice)
+	elem, _, err := bsc.decodeType(dc, vr, tByteSlice)
 	if err != nil {
 		return err
 	}

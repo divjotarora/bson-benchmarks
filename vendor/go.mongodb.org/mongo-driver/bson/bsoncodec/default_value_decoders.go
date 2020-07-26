@@ -164,6 +164,7 @@ func (dvd DefaultValueDecoders) DDecodeValue(dc DecodeContext, vr bsonrw.ValueRe
 			return err
 		}
 
+		// Pass false for convert because we don't need to call reflect.Value.Convert for tEmpty.
 		elem, err := decodeTypeOrValueWithInfo(decoder, tEmptyTypeDecoder, dc, elemVr, tEmpty, false)
 		if err != nil {
 			return err

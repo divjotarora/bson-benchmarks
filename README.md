@@ -37,21 +37,3 @@ This run was used to get the beginning baseline numbers:
 
 Numbers for both the driver and mgo, as well as comparison numbers generated using `benchstat` are available in the
 `benchmarks/starting` directory. The `benchstat` tool was invoked using `benchstat mgo.bench driver.bench > comparison.bench`.
-
-## no-bugfix
-
-Includes all changes (GODRIVER-1680 - GODRIVER-1683) but has a bug where custom type map entries for `interface{}` are
-not respected and documents cannot be decoded into maps with custom types that have type decoders. For example:
-
-```
-type myBool bool
-var m map[string]myBool
-```
-
-Decoding into `m` in this example would fail because the value isn't converted correctly.
-
-## full-bugfix
-
-Includes all changes and a fix to the bug described above. The fix is to call `reflect.Value.Convert` to convert between
-types. This also includes a small optimization so the `decodeTypeOrValueWithInfo` function only calls `Convert` if the
-source and target types differ because adding the `Convert` call unconditionally introduced a perf decrease.

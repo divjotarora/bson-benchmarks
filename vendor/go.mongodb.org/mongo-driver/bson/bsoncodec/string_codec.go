@@ -46,9 +46,9 @@ func (sc *StringCodec) EncodeValue(ectx EncodeContext, vw bsonrw.ValueWriter, va
 	return vw.WriteString(val.String())
 }
 
-func (sc *StringCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, reflect.Type, error) {
+func (sc *StringCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, error) {
 	if t.Kind() != reflect.String {
-		return emptyValue, emptyType, ValueDecoderError{
+		return emptyValue, ValueDecoderError{
 			Name:     "StringDecodeValue",
 			Kinds:    []reflect.Kind{reflect.String},
 			Received: reflect.Zero(t),
@@ -61,12 +61,12 @@ func (sc *StringCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t ref
 	case bsontype.String:
 		str, err = vr.ReadString()
 		if err != nil {
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 	case bsontype.ObjectID:
 		oid, err := vr.ReadObjectID()
 		if err != nil {
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 		if sc.DecodeObjectIDAsHex {
 			str = oid.Hex()
@@ -77,30 +77,30 @@ func (sc *StringCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t ref
 	case bsontype.Symbol:
 		str, err = vr.ReadSymbol()
 		if err != nil {
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 	case bsontype.Binary:
 		data, subtype, err := vr.ReadBinary()
 		if err != nil {
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 		if subtype != bsontype.BinaryGeneric && subtype != bsontype.BinaryBinaryOld {
-			return emptyValue, emptyType, decodeBinaryError{subtype: subtype, typeName: "string"}
+			return emptyValue, decodeBinaryError{subtype: subtype, typeName: "string"}
 		}
 		str = string(data)
 	case bsontype.Null:
 		if err = vr.ReadNull(); err != nil {
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 	case bsontype.Undefined:
 		if err = vr.ReadUndefined(); err != nil {
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 	default:
-		return emptyValue, emptyType, fmt.Errorf("cannot decode %v into a string type", vr.Type())
+		return emptyValue, fmt.Errorf("cannot decode %v into a string type", vr.Type())
 	}
 
-	return reflect.ValueOf(str), tString, nil
+	return reflect.ValueOf(str), nil
 }
 
 // DecodeValue is the ValueDecoder for string types.
@@ -109,7 +109,7 @@ func (sc *StringCodec) DecodeValue(dctx DecodeContext, vr bsonrw.ValueReader, va
 		return ValueDecoderError{Name: "StringDecodeValue", Kinds: []reflect.Kind{reflect.String}, Received: val}
 	}
 
-	elem, _, err := sc.decodeType(dctx, vr, val.Type())
+	elem, err := sc.decodeType(dctx, vr, val.Type())
 	if err != nil {
 		return err
 	}

@@ -89,29 +89,29 @@ func (eic EmptyInterfaceCodec) getEmptyInterfaceDecodeType(dc DecodeContext, val
 	return nil, err
 }
 
-func (eic EmptyInterfaceCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, reflect.Type, error) {
+func (eic EmptyInterfaceCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, error) {
 	if t != tEmpty {
-		return emptyValue, emptyType, ValueDecoderError{Name: "EmptyInterfaceDecodeValue", Types: []reflect.Type{tEmpty}, Received: reflect.Zero(t)}
+		return emptyValue, ValueDecoderError{Name: "EmptyInterfaceDecodeValue", Types: []reflect.Type{tEmpty}, Received: reflect.Zero(t)}
 	}
 
 	rtype, err := eic.getEmptyInterfaceDecodeType(dc, vr.Type())
 	if err != nil {
 		switch vr.Type() {
 		case bsontype.Null:
-			return reflect.Zero(t), t, vr.ReadNull()
+			return reflect.Zero(t), vr.ReadNull()
 		default:
-			return emptyValue, emptyType, err
+			return emptyValue, err
 		}
 	}
 
 	decoder, err := dc.LookupDecoder(rtype)
 	if err != nil {
-		return emptyValue, emptyType, err
+		return emptyValue, err
 	}
 
 	elem, err := decodeTypeOrValue(decoder, dc, vr, rtype)
 	if err != nil {
-		return emptyValue, emptyType, err
+		return emptyValue, err
 	}
 
 	if eic.DecodeBinaryAsSlice && rtype == tBinary {
@@ -121,7 +121,7 @@ func (eic EmptyInterfaceCodec) decodeType(dc DecodeContext, vr bsonrw.ValueReade
 		}
 	}
 
-	return elem, rtype, nil
+	return elem, nil
 }
 
 // DecodeValue is the ValueDecoderFunc for interface{}.
@@ -130,7 +130,7 @@ func (eic EmptyInterfaceCodec) DecodeValue(dc DecodeContext, vr bsonrw.ValueRead
 		return ValueDecoderError{Name: "EmptyInterfaceDecodeValue", Types: []reflect.Type{tEmpty}, Received: val}
 	}
 
-	elem, _, err := eic.decodeType(dc, vr, val.Type())
+	elem, err := eic.decodeType(dc, vr, val.Type())
 	if err != nil {
 		return err
 	}

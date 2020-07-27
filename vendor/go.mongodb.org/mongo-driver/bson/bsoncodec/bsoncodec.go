@@ -17,7 +17,6 @@ import (
 
 var (
 	emptyValue = reflect.Value{}
-	emptyType  = reflect.Type(nil)
 )
 
 // Marshaler is an interface implemented by types that can marshal themselves
@@ -163,13 +162,13 @@ func (fn ValueDecoderFunc) DecodeValue(dc DecodeContext, vr bsonrw.ValueReader, 
 
 // typeDecoder is the interface implemented by types that can handle the decoding of a value given its type.
 type typeDecoder interface {
-	decodeType(DecodeContext, bsonrw.ValueReader, reflect.Type) (reflect.Value, reflect.Type, error)
+	decodeType(DecodeContext, bsonrw.ValueReader, reflect.Type) (reflect.Value, error)
 }
 
 // typeDecoderFunc is an adapter function that allows a function with the correct signature to be used as a typeDecoder.
-type typeDecoderFunc func(DecodeContext, bsonrw.ValueReader, reflect.Type) (reflect.Value, reflect.Type, error)
+type typeDecoderFunc func(DecodeContext, bsonrw.ValueReader, reflect.Type) (reflect.Value, error)
 
-func (fn typeDecoderFunc) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, reflect.Type, error) {
+func (fn typeDecoderFunc) decodeType(dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type) (reflect.Value, error) {
 	return fn(dc, vr, t)
 }
 
@@ -191,8 +190,8 @@ func decodeTypeOrValue(decoder ValueDecoder, dc DecodeContext, vr bsonrw.ValueRe
 
 func decodeTypeOrValueWithInfo(vd ValueDecoder, td typeDecoder, dc DecodeContext, vr bsonrw.ValueReader, t reflect.Type, convert bool) (reflect.Value, error) {
 	if td != nil {
-		val, valType, err := td.decodeType(dc, vr, t)
-		if err == nil && convert && valType != t {
+		val, err := td.decodeType(dc, vr, t)
+		if err == nil && convert && val.Type() != t {
 			// This conversion step is necessary for slices and maps. If a user declares variables like:
 			//
 			// type myBool bool

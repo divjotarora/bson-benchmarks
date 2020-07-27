@@ -37,3 +37,8 @@ This run was used to get the beginning baseline numbers:
 
 Numbers for both the driver and mgo, as well as comparison numbers generated using `benchstat` are available in the
 `benchmarks/starting` directory. The `benchstat` tool was invoked using `benchstat mgo.bench driver.bench > comparison.bench`.
+
+## All-Changes
+
+Used to get numbers after GODRIVER-1680/1681/1682/1683 had been merged into the driver's `master` branch. These were
+based on driver commit `ec900457b07564260c439ea2de362521f03efbf9`.

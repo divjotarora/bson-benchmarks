@@ -1,390 +1,390 @@
 goos: linux
 goarch: amd64
 pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3293095	       364 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2895379	       415 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1444312	       823 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  399807	      3005 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  215871	      5605 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   36073	     33277 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18387	     65203 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2767802	       437 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1151 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  265599	      4530 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  135670	      8914 ns/op	    1860 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25587	     46785 ns/op	   15008 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12501	     96049 ns/op	   29472 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  596008	      1846 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1126 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	  963723	      1119 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     973	   1274715 ns/op	  875103 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3579006	       333 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1895895	       632 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  465914	      2565 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  128744	      9244 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68310	     17478 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15106	     79532 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7755	    157927 ns/op	   97800 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1448559	       827 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  403662	      2959 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93177	     12776 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48230	     24838 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9028	    124408 ns/op	  110518 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4354	    251263 ns/op	  217147 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  242400	      4945 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  387148	      3126 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  299725	      4067 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     379	   3148116 ns/op	 1128416 B/op	   42440 allocs/op
-PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.122s
-goos: linux
-goarch: amd64
-pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3391196	       355 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2959915	       408 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1403050	       832 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  398907	      3214 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  213763	      5676 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   35924	     33563 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18302	     75519 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2802823	       431 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/empty-8   	 3279860	       358 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2892956	       413 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1405100	       876 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  374978	      3548 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  215090	      5663 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   33775	     37260 ns/op	   53088 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18088	     65847 ns/op	   96122 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2777742	       442 ns/op	     320 B/op	       3 allocs/op
 BenchmarkMarshal/nested/size_10-8        	 1000000	      1141 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  265602	      4507 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  133204	      8909 ns/op	    1861 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25660	     46753 ns/op	   14998 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12501	     96080 ns/op	   29492 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  678793	      1873 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1070 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1129 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     944	   1298828 ns/op	  875105 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3604207	       332 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1899963	       633 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  463420	      2559 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  130330	      9274 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68941	     17519 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   14970	     79506 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7488	    157981 ns/op	   97802 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1454534	       825 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  410598	      2949 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   92475	     12723 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48867	     24654 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9279	    124315 ns/op	  110515 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4544	    250775 ns/op	  217105 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  241894	      4944 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  387231	      3120 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  295719	      4068 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     382	   3131123 ns/op	 1128397 B/op	   42440 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  271584	      4464 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  135886	      8826 ns/op	    1861 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25755	     46566 ns/op	   15008 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12477	     95915 ns/op	   29371 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  661369	      1834 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1138 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1088091	      1109 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     951	   1258979 ns/op	  875085 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3133692	       383 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1894309	       634 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  471573	      2554 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  130202	      9233 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   68673	     17482 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15061	     79623 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7711	    157983 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1457763	       826 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  408397	      2944 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   94015	     12716 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48604	     24821 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    8944	    123957 ns/op	  110520 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4384	    254245 ns/op	  217140 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  242672	      4945 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  377804	      3110 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  294409	      4059 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3123889 ns/op	 1128405 B/op	   42440 allocs/op
 PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.543s
+ok  	github.com/divjotarora/bson-benchmarks	51.598s
 goos: linux
 goarch: amd64
 pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3301941	       361 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2897568	       416 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1455382	       827 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  401959	      3335 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  191468	      5589 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   35979	     33378 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18291	     64903 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2746917	       434 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1152 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  265027	      4537 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  134059	      8899 ns/op	    1859 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25578	     46941 ns/op	   14998 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12480	     95807 ns/op	   29473 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  679815	      1812 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1106 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1182 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     944	   1297406 ns/op	  875117 B/op	     123 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3581709	       334 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1894916	       634 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  468272	      2574 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  130827	      9238 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68356	     17520 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15006	     79617 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7767	    158250 ns/op	   97801 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1450826	       824 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  407752	      2945 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93081	     12657 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48514	     24695 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    8886	    123143 ns/op	  110521 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4497	    249446 ns/op	  217115 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  242190	      4930 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  387740	      3118 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  296631	      4079 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     382	   3132312 ns/op	 1128398 B/op	   42440 allocs/op
+BenchmarkMarshal/flat/empty-8   	 3307688	       363 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2860033	       422 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1380477	       880 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  402856	      3332 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  214387	      5617 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   36492	     32963 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18631	     64760 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2677044	       440 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1147 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  266258	      4481 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  136711	      8819 ns/op	    1860 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25732	     46595 ns/op	   14992 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12520	     95705 ns/op	   29431 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  669204	      1889 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1083 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1069 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     951	   1213708 ns/op	  875101 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3194120	       378 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1898685	       630 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  473538	      2552 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  130029	      9183 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   69177	     17391 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15144	     79188 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7452	    157453 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1466470	       820 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  417535	      2933 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   94746	     12635 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48918	     24719 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    8802	    123263 ns/op	  110522 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4604	    250013 ns/op	  217093 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  242055	      4923 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  385431	      3114 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  296762	      4052 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     380	   3138841 ns/op	 1128410 B/op	   42440 allocs/op
 PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.314s
+ok  	github.com/divjotarora/bson-benchmarks	49.355s
 goos: linux
 goarch: amd64
 pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3386210	       357 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2897605	       411 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1417694	       851 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  398797	      3010 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  213054	      5617 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   35844	     33255 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18434	     64612 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2798623	       433 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1135 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  264430	      4502 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  135609	      8911 ns/op	    1860 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25501	     46930 ns/op	   14977 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12454	     96296 ns/op	   29310 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  676766	      1874 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1054 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1079928	      1115 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     918	   1269223 ns/op	  875109 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3610638	       331 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1900534	       631 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  469314	      2557 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  129980	      9191 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68514	     17415 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15106	     79256 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7624	    157169 ns/op	   97801 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1462261	       818 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  407866	      2940 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   94936	     12746 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48894	     24624 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9115	    123157 ns/op	  110517 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4369	    252332 ns/op	  217143 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  244459	      4916 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  390548	      3116 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  292730	      4060 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     379	   3140484 ns/op	 1128415 B/op	   42440 allocs/op
-PASS
-ok  	github.com/divjotarora/bson-benchmarks	50.197s
-goos: linux
-goarch: amd64
-pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3344512	       357 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2958120	       409 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1462749	       879 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  400086	      3089 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  216062	      6140 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   29671	     33724 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18267	     65032 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2754814	       435 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1142 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  266952	      4525 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  134090	      8892 ns/op	    1860 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25486	     46870 ns/op	   15003 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12517	     96204 ns/op	   29371 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  588798	      1863 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1112 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1078250	      1095 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     914	   1271862 ns/op	  875115 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3585753	       333 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1899588	       631 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  471591	      2552 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  131388	      9213 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68352	     17455 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15099	     79141 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7657	    157281 ns/op	   97801 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1465680	       822 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  403687	      2940 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93600	     12726 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48349	     24760 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9243	    123498 ns/op	  110516 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4549	    249438 ns/op	  217104 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  244071	      4931 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  391783	      3121 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  298074	      4056 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     384	   3144285 ns/op	 1128386 B/op	   42440 allocs/op
-PASS
-ok  	github.com/divjotarora/bson-benchmarks	50.238s
-goos: linux
-goarch: amd64
-pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3359383	       358 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2923496	       410 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1382188	       852 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  396907	      3349 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  191943	      5642 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   35756	     33330 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18374	     65530 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2757726	       435 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1146 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  265886	      4522 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  134613	      8907 ns/op	    1859 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25663	     46876 ns/op	   14982 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12475	     96036 ns/op	   29452 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  663352	      1920 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1091 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1104 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     943	   1303789 ns/op	  875113 B/op	     123 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3598957	       333 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1897731	       634 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  470794	      2578 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  131391	      9268 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68503	     17589 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   14968	     79976 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7532	    156951 ns/op	   97801 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1449926	       824 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  403515	      2954 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93682	     12739 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   49020	     24851 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9091	    123278 ns/op	  110518 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4627	    249498 ns/op	  217088 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  245842	      4952 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  376682	      3127 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  288908	      4067 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     380	   3147072 ns/op	 1128409 B/op	   42440 allocs/op
-PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.321s
-goos: linux
-goarch: amd64
-pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3362287	       357 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2860820	       413 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1450281	       872 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  403587	      3128 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  214485	      5648 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   36586	     33557 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18428	     65204 ns/op	   96122 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2729241	       438 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1148 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  266494	      4541 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  134677	      8914 ns/op	    1861 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25513	     47051 ns/op	   15003 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12513	     96035 ns/op	   29452 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  655723	      1843 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1140 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/flat/empty-8   	 3363048	       356 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2908554	       409 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1404854	       841 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  404210	      3451 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  210759	      6419 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   36256	     32957 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18774	     64411 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2755602	       433 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1147 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  269276	      4465 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  135876	      8819 ns/op	    1861 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25722	     46749 ns/op	   15018 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12529	     95741 ns/op	   29391 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  665863	      1812 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1044 ns/op	     288 B/op	       2 allocs/op
 BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1086 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     944	   1270099 ns/op	  875097 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3567963	       335 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1895100	       633 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  479779	      2560 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  129668	      9261 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68310	     17527 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15127	     79320 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7472	    156929 ns/op	   97801 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1453376	       826 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  405878	      2928 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93525	     12754 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48914	     24647 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9260	    123626 ns/op	  110516 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4460	    254377 ns/op	  217123 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  242422	      4961 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  386664	      3119 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  295302	      4065 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3132850 ns/op	 1128405 B/op	   42440 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     963	   1267739 ns/op	  875090 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3157732	       380 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1900854	       632 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  471085	      2549 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  129325	      9240 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   69099	     17452 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15061	     78832 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7443	    157226 ns/op	   97802 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1455136	       820 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  404743	      2929 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   94330	     12645 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48678	     24626 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9063	    123261 ns/op	  110518 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4480	    249583 ns/op	  217119 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  245349	      4921 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  382056	      3117 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  292797	      4068 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     379	   3135898 ns/op	 1128416 B/op	   42440 allocs/op
 PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.376s
+ok  	github.com/divjotarora/bson-benchmarks	49.388s
 goos: linux
 goarch: amd64
 pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3363794	       358 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2972014	       409 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1428832	       861 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  410822	      3426 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  211492	      5823 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   36310	     33421 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18386	     64610 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2770500	       437 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1140 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  265040	      4522 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  134120	      8930 ns/op	    1860 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25422	     47172 ns/op	   15014 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12468	     96424 ns/op	   29412 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  663198	      1809 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1066 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1095 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     966	   1273457 ns/op	  875122 B/op	     123 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3613435	       333 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1896348	       631 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  467883	      2555 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  130566	      9217 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   68612	     17460 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15067	     79613 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7338	    158621 ns/op	   97802 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1451022	       823 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  400143	      2941 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   94077	     12784 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48402	     24772 ns/op	   25384 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    8938	    122710 ns/op	  110520 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4578	    250472 ns/op	  217098 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  244821	      4944 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  383248	      3111 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  297936	      4058 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3133478 ns/op	 1128405 B/op	   42440 allocs/op
+BenchmarkMarshal/flat/empty-8   	 3369116	       357 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2882904	       417 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1432405	       836 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  400633	      3367 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  218083	      5822 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   30162	     35253 ns/op	   53088 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18428	     65666 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2725558	       436 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1143 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  269468	      4459 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  135276	      8827 ns/op	    1860 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25634	     46672 ns/op	   14967 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12579	     95332 ns/op	   29370 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  661720	      1802 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1100 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1138 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     948	   1303188 ns/op	  875112 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3175652	       380 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1892427	       632 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  470790	      2547 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  129129	      9253 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   69632	     17368 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15140	     79319 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7512	    157036 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1455189	       826 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  411183	      2914 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   93465	     12701 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48655	     24732 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9295	    124184 ns/op	  110515 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4425	    250114 ns/op	  217131 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  246816	      4939 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  380523	      3119 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  295225	      4056 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     382	   3127311 ns/op	 1128397 B/op	   42440 allocs/op
 PASS
-ok  	github.com/divjotarora/bson-benchmarks	50.440s
+ok  	github.com/divjotarora/bson-benchmarks	49.404s
 goos: linux
 goarch: amd64
 pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3324849	       360 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2910417	       418 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1406902	       831 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  398366	      3200 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  216879	      5599 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   29782	     37600 ns/op	   53088 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   18470	     64565 ns/op	   96123 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2735652	       434 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/empty-8   	 3381663	       353 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2984868	       410 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1475732	       843 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  409659	      3192 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  216241	      5802 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   30156	     42652 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   17974	     64887 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2776364	       434 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1128 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  265525	      4459 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  136875	      8810 ns/op	    1860 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25533	     46711 ns/op	   14993 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12589	     95368 ns/op	   29511 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  684589	      1802 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1102 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1037 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     960	   1294514 ns/op	  875103 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3153411	       381 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1898569	       633 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  470242	      2551 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  129304	      9246 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   68434	     17422 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15120	     79055 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7464	    157343 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1460818	       822 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  411060	      2930 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   93312	     12742 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48428	     24554 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9296	    123434 ns/op	  110515 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4344	    252730 ns/op	  217149 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  242032	      4924 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  386066	      3109 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  293180	      4063 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3144035 ns/op	 1128405 B/op	   42440 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	49.433s
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkMarshal/flat/empty-8   	 3439593	       354 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2937274	       412 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1482699	       867 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  405828	      3167 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  214387	      5649 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   36259	     36099 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   16602	     73482 ns/op	   96124 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2788249	       428 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1131 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  268300	      4446 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  136286	      8791 ns/op	    1860 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25801	     46665 ns/op	   14992 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12577	     95516 ns/op	   29390 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  603604	      1791 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1068 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1027 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     925	   1262974 ns/op	  875115 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3180702	       380 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1896307	       634 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  463611	      2562 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  128648	      9234 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   68979	     17487 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15046	     79968 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7603	    156999 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1461356	       822 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  411116	      2923 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   93739	     12620 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   49022	     24713 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9079	    122817 ns/op	  110518 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4584	    248069 ns/op	  217097 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  242017	      4943 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  386760	      3137 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  296634	      4056 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3129328 ns/op	 1128404 B/op	   42440 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	49.285s
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkMarshal/flat/empty-8   	 3390481	       353 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2945708	       409 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1484956	       820 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  379792	      3311 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  216126	      5709 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   36177	     33364 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18414	     64439 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2749382	       434 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1136 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  270696	      4445 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  135658	      8809 ns/op	    1861 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25677	     46553 ns/op	   14992 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12558	     95393 ns/op	   29411 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  675187	      1751 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	  941389	      1099 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1116 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     961	   1305894 ns/op	  875103 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3145197	       384 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1877409	       640 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  469645	      2567 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  128415	      9229 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   69208	     17532 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   14989	     79894 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7585	    158309 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1451026	       828 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  401614	      2944 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   94164	     12733 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48456	     24739 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9114	    122905 ns/op	  110518 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4542	    249892 ns/op	  217106 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  244592	      4935 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  384151	      3123 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  293308	      4075 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     380	   3121317 ns/op	 1128409 B/op	   42440 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	49.245s
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkMarshal/flat/empty-8   	 3371553	       352 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2939179	       408 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1487529	       811 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  404739	      3028 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  215592	      5573 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   36006	     33055 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18537	     64677 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2752370	       435 ns/op	     320 B/op	       3 allocs/op
 BenchmarkMarshal/nested/size_10-8        	 1000000	      1144 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  263986	      4516 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  134716	      8889 ns/op	    1861 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25466	     46973 ns/op	   14978 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12484	     96013 ns/op	   29452 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  651736	      1908 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1052 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1096 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     976	   1222456 ns/op	  875100 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3595000	       334 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1898212	       634 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  475418	      2551 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  130742	      9232 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   69198	     17467 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15129	     79319 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7411	    158309 ns/op	   97802 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1456982	       827 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  397989	      2939 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93994	     12767 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48451	     24654 ns/op	   25383 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    9376	    123701 ns/op	  110514 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4460	    249658 ns/op	  217123 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  243480	      4944 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  382755	      3119 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  294816	      4058 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     382	   3137766 ns/op	 1128398 B/op	   42440 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  270135	      4468 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  137179	      8812 ns/op	    1862 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25783	     46673 ns/op	   15023 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12595	     95415 ns/op	   29370 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  657828	      1822 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1144 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1040 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     957	   1212915 ns/op	  875117 B/op	     123 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3141277	       382 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1875799	       638 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  466876	      2560 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  131941	      9204 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   68912	     17400 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15219	     78801 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7712	    156498 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1455416	       826 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  404774	      2936 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   95458	     12761 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48399	     24588 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9006	    122982 ns/op	  110519 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4546	    249390 ns/op	  217105 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  241363	      4934 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  377614	      3126 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  291254	      4052 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3148891 ns/op	 1128404 B/op	   42440 allocs/op
 PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.189s
+ok  	github.com/divjotarora/bson-benchmarks	49.094s
 goos: linux
 goarch: amd64
 pkg: github.com/divjotarora/bson-benchmarks
-BenchmarkMarshal/flat/empty-8   	 3345561	       360 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/small-8   	 2901666	       413 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_10-8 	 1401096	       837 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/flat/size_50-8 	  397363	      3313 ns/op	    1857 B/op	       5 allocs/op
-BenchmarkMarshal/flat/size_100-8         	  212206	      5817 ns/op	    3906 B/op	       6 allocs/op
-BenchmarkMarshal/flat/size_500-8         	   35859	     33549 ns/op	   53087 B/op	      13 allocs/op
-BenchmarkMarshal/flat/size_1000-8        	   16434	     67980 ns/op	   96124 B/op	      15 allocs/op
-BenchmarkMarshal/nested/small-8          	 2748397	       440 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_10-8        	 1000000	      1151 ns/op	     320 B/op	       3 allocs/op
-BenchmarkMarshal/nested/size_50-8        	  267315	      4515 ns/op	     833 B/op	       4 allocs/op
-BenchmarkMarshal/nested/size_100-8       	  135516	      8916 ns/op	    1861 B/op	       5 allocs/op
-BenchmarkMarshal/nested/size_500-8       	   25503	     46830 ns/op	   15013 B/op	       9 allocs/op
-BenchmarkMarshal/nested/size_1000-8      	   12470	     96185 ns/op	   29432 B/op	      11 allocs/op
-BenchmarkMarshal/commands/isMaster_response-8         	  674263	      1886 ns/op	     800 B/op	       3 allocs/op
-BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1122 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1080 ns/op	     288 B/op	       2 allocs/op
-BenchmarkMarshal/commands/large_insert_request-8      	     948	   1223070 ns/op	  875110 B/op	     122 allocs/op
-BenchmarkUnmarshal/flat/empty-8                       	 3572474	       335 ns/op	     224 B/op	       3 allocs/op
-BenchmarkUnmarshal/flat/small-8                       	 1893138	       637 ns/op	     320 B/op	       8 allocs/op
-BenchmarkUnmarshal/flat/size_10-8                     	  475688	      2561 ns/op	    1568 B/op	      39 allocs/op
-BenchmarkUnmarshal/flat/size_50-8                     	  130290	      9275 ns/op	    5921 B/op	     161 allocs/op
-BenchmarkUnmarshal/flat/size_100-8                    	   67970	     17643 ns/op	   11619 B/op	     312 allocs/op
-BenchmarkUnmarshal/flat/size_500-8                    	   15048	     79837 ns/op	   49009 B/op	    1514 allocs/op
-BenchmarkUnmarshal/flat/size_1000-8                   	    7515	    158011 ns/op	   97801 B/op	    3015 allocs/op
-BenchmarkUnmarshal/nested/small-8                     	 1448716	       829 ns/op	     384 B/op	      10 allocs/op
-BenchmarkUnmarshal/nested/size_10-8                   	  403802	      2943 ns/op	    1824 B/op	      30 allocs/op
-BenchmarkUnmarshal/nested/size_50-8                   	   93463	     12745 ns/op	   12707 B/op	     113 allocs/op
-BenchmarkUnmarshal/nested/size_100-8                  	   48217	     24718 ns/op	   25384 B/op	     214 allocs/op
-BenchmarkUnmarshal/nested/size_500-8                  	    8887	    123186 ns/op	  110521 B/op	    1016 allocs/op
-BenchmarkUnmarshal/nested/size_1000-8                 	    4596	    252321 ns/op	  217095 B/op	    2017 allocs/op
-BenchmarkUnmarshal/commands/isMaster_response-8       	  244916	      4959 ns/op	    2640 B/op	      65 allocs/op
-BenchmarkUnmarshal/commands/findOne_request-8         	  381958	      3134 ns/op	    1648 B/op	      41 allocs/op
-BenchmarkUnmarshal/commands/findOne_response-8        	  294960	      4078 ns/op	    2048 B/op	      53 allocs/op
-BenchmarkUnmarshal/commands/large_insert_request-8    	     379	   3134957 ns/op	 1128416 B/op	   42440 allocs/op
+BenchmarkMarshal/flat/empty-8   	 3414487	       352 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2901646	       406 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1427332	       821 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  385968	      3160 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  193660	      6300 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   33595	     33464 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18570	     64894 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2785968	       437 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1129 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  268240	      4450 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  136140	      8821 ns/op	    1859 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25732	     46630 ns/op	   15028 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12547	     95345 ns/op	   29512 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  676348	      1760 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1036 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1030 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     909	   1267055 ns/op	  875107 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3174966	       380 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1895178	       634 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  466452	      2553 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  132693	      9217 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   68962	     17440 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15141	     78897 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7417	    157246 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1454632	       822 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  402186	      2933 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   93684	     12753 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   48482	     24594 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9164	    123772 ns/op	  110517 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4437	    248614 ns/op	  217128 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  244753	      4931 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  376136	      3107 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  295477	      4060 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     380	   3134626 ns/op	 1128408 B/op	   42440 allocs/op
 PASS
-ok  	github.com/divjotarora/bson-benchmarks	49.398s
+ok  	github.com/divjotarora/bson-benchmarks	48.860s
+goos: linux
+goarch: amd64
+pkg: github.com/divjotarora/bson-benchmarks
+BenchmarkMarshal/flat/empty-8   	 3421858	       351 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/small-8   	 2936706	       408 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_10-8 	 1485582	       817 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/flat/size_50-8 	  407300	      2986 ns/op	    1857 B/op	       5 allocs/op
+BenchmarkMarshal/flat/size_100-8         	  196126	      5600 ns/op	    3906 B/op	       6 allocs/op
+BenchmarkMarshal/flat/size_500-8         	   36282	     33386 ns/op	   53087 B/op	      13 allocs/op
+BenchmarkMarshal/flat/size_1000-8        	   18517	     64632 ns/op	   96123 B/op	      15 allocs/op
+BenchmarkMarshal/nested/small-8          	 2718558	       431 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_10-8        	 1000000	      1132 ns/op	     320 B/op	       3 allocs/op
+BenchmarkMarshal/nested/size_50-8        	  264597	      4451 ns/op	     833 B/op	       4 allocs/op
+BenchmarkMarshal/nested/size_100-8       	  136536	      8799 ns/op	    1862 B/op	       5 allocs/op
+BenchmarkMarshal/nested/size_500-8       	   25620	     46751 ns/op	   14972 B/op	       9 allocs/op
+BenchmarkMarshal/nested/size_1000-8      	   12589	     95478 ns/op	   29390 B/op	      11 allocs/op
+BenchmarkMarshal/commands/isMaster_response-8         	  684843	      1793 ns/op	     800 B/op	       3 allocs/op
+BenchmarkMarshal/commands/findOne_request-8           	 1000000	      1112 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/findOne_response-8          	 1000000	      1037 ns/op	     288 B/op	       2 allocs/op
+BenchmarkMarshal/commands/large_insert_request-8      	     956	   1296977 ns/op	  875106 B/op	     122 allocs/op
+BenchmarkUnmarshal/flat/empty-8                       	 3134407	       380 ns/op	     256 B/op	       4 allocs/op
+BenchmarkUnmarshal/flat/small-8                       	 1891429	       635 ns/op	     320 B/op	       8 allocs/op
+BenchmarkUnmarshal/flat/size_10-8                     	  479666	      2550 ns/op	    1568 B/op	      39 allocs/op
+BenchmarkUnmarshal/flat/size_50-8                     	  131668	      9227 ns/op	    5921 B/op	     161 allocs/op
+BenchmarkUnmarshal/flat/size_100-8                    	   69268	     17420 ns/op	   11619 B/op	     312 allocs/op
+BenchmarkUnmarshal/flat/size_500-8                    	   15225	     79085 ns/op	   49009 B/op	    1514 allocs/op
+BenchmarkUnmarshal/flat/size_1000-8                   	    7384	    155732 ns/op	   97801 B/op	    3015 allocs/op
+BenchmarkUnmarshal/nested/small-8                     	 1458159	       825 ns/op	     384 B/op	      10 allocs/op
+BenchmarkUnmarshal/nested/size_10-8                   	  403698	      2939 ns/op	    1824 B/op	      30 allocs/op
+BenchmarkUnmarshal/nested/size_50-8                   	   94514	     12706 ns/op	   12707 B/op	     113 allocs/op
+BenchmarkUnmarshal/nested/size_100-8                  	   49017	     24640 ns/op	   25383 B/op	     214 allocs/op
+BenchmarkUnmarshal/nested/size_500-8                  	    9034	    122914 ns/op	  110518 B/op	    1016 allocs/op
+BenchmarkUnmarshal/nested/size_1000-8                 	    4449	    250975 ns/op	  217126 B/op	    2017 allocs/op
+BenchmarkUnmarshal/commands/isMaster_response-8       	  244732	      4936 ns/op	    2640 B/op	      65 allocs/op
+BenchmarkUnmarshal/commands/findOne_request-8         	  379333	      3116 ns/op	    1648 B/op	      41 allocs/op
+BenchmarkUnmarshal/commands/findOne_response-8        	  295075	      4057 ns/op	    2048 B/op	      53 allocs/op
+BenchmarkUnmarshal/commands/large_insert_request-8    	     381	   3135837 ns/op	 1128405 B/op	   42440 allocs/op
+PASS
+ok  	github.com/divjotarora/bson-benchmarks	49.003s

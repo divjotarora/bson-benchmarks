@@ -13,7 +13,7 @@ import (
 var (
 	tD           = reflect.TypeOf(primitive.D{})
 	bsonRegistry = bson.NewRegistryBuilder().
-			RegisterEncoder(tD, bsonx.ReflectionFreeDEncoder).
+			RegisterCodec(tD, bsonx.ReflectionFreeDCodec).
 			Build()
 )
 
